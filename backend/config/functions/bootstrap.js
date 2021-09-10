@@ -24,7 +24,6 @@ module.exports = () => {
           socket.broadcast.emit("newProductAdded", { product });
         }
       } catch (err) {
-        console.log({ err });
         callback({ type: "error", message: err });
         console.log("Error occured. Please try again");
       }
@@ -43,7 +42,6 @@ module.exports = () => {
           socket.broadcast.emit("newReviewAdded", { review });
         }
       } catch (err) {
-        console.log({ err });
         callback({ type: "error", message: err });
         console.log("Error occured. Please try again");
       }
